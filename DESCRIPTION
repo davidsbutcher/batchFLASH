@@ -1,5 +1,5 @@
 Package: batchFLASH
-Title: What the Package Does (One Line, Title Case)
+Title: Run FLASHDeconv and plot results in batch mode
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "First",
