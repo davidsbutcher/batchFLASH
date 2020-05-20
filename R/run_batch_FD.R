@@ -44,7 +44,7 @@ run_batch_FD <-
 
       ## Determine expected output based on input dir or file
 
-      if (file.exists(inputDir) == FALSE) {
+      if (dir.exists(inputDir) == TRUE) {
 
          expected_output <-
             fs::dir_ls(
@@ -123,7 +123,11 @@ run_batch_FD <-
       if (FD_done == FALSE) {
 
          system2(
-            "C:/Program Files/OpenMS-2.4.0-HEAD-2019-12-09/bin/FLASHDeconv",
+            system.file(
+               "bin",
+               "FLASHDeconv.exe",
+               package = "batchFLASH"
+            ),
             args = paste(
                glue::glue("-in {inputDir_sys2} -out {outputDir_sys2}"),
                FDargs,
