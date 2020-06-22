@@ -1,4 +1,4 @@
-Untitled
+batchFLASH
 ================
 
 ## Installation
@@ -11,6 +11,24 @@ remotes::install_github("davidsbutcher/batchFLASH")
 
 ## Usage
 
+To run all raw files in a directory:
+
+``` r
+run_batch_FD(
+   "C:/Users/Scientist/Documents/raw_file_directory",
+   "C:/Users/Scientist/Documents/batchFLASH_output/good_data"
+)
+```
+
+To run a single raw file:
+
+``` r
+run_batch_FD(
+   "C:/Users/Scientist/Documents/raw_file_directory/good_raw_file.raw",
+   "C:/Users/Scientist/Documents/batchFLASH_output/good_data"
+)
+```
+
 ### Arguments
 
   - `inputDir` Can be an mzML file or a directory containing mzML files.
@@ -21,7 +39,7 @@ remotes::install_github("davidsbutcher/batchFLASH")
   - `FDargs` Arguments to FLASHDeconv. Defaults to `c("-RTwindow 20",
     "-minRTspan 3")`.
 
-## Licensing and attribution
+## License and attribution
 
 The FLASHDeconv binary is part of the [OpenMS software
 library](dx.doi.org/10.1038/nmeth.3959) and is licensed under the
